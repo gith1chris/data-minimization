@@ -1011,10 +1011,10 @@ Generates:
                         <h5>Prover Verifies the Issuer’s Proof of Correctness</h5>
                         <ul>
                             <li>
-𝓩^ = 𝓩<sup>𝓬</sup>𝓢<sup>𝓧''𝓩</sup> mod 𝓷
+𝓩^ = (𝓩<sup>-1</sup>)<sup>𝓬</sup>𝓢<sup>𝓧''𝓩</sup> mod 𝓷
                             </li>
                             <li>
-𝓡^<sub>𝓲</sub> = 𝓡<sub>𝓲</sub><sup>𝓬</sup>𝓢<sup>𝓧''𝓡𝓲</sup> mod 𝓷, 1 ≤ 𝓲  ≤ 𝓵
+𝓡^<sub>𝓲</sub> = (𝓡<sub>-1</sub>)<sub>𝓲</sub><sup>𝓬</sup>𝓢<sup>𝓧''𝓡𝓲</sup> mod 𝓷, 1 ≤ 𝓲  ≤ 𝓵
                             </li>
                             <li>
 Verifies 𝓬 = 𝓗𝓪𝓼𝓱 ( 𝓩 || 𝓡<sub>1</sub> || . . . || 𝓡<sub>𝓵</sub> || 𝓩^ ||
@@ -1057,7 +1057,7 @@ Issuer Verifies Prover Setup
                         </h5>
                         <ul>
                             <li>
-Computes 𝓤^ = 𝓤<sup>-𝓬</sup>𝓢<sup>𝓿^</sup>𝓡<sub>1</sub><sup>𝓶^<sub>1</sub></sup> mod 𝓷
+Computes 𝓤^ = 𝓤<sup>-𝓬’</sup>𝓢<sup>𝓿^</sup>𝓡<sub>1</sub><sup>𝓶^<sub>1</sub></sup> mod 𝓷
                             </li>
                             <li>
 Verifies 𝓬’ = 𝓗𝓪𝓼𝓱 ( 𝓤 || 𝓤^ || 𝓷<sub>0</sub> )
@@ -1113,14 +1113,14 @@ Prover Computes
 𝓿 = 𝓿’ + 𝓿*
                                 </li>
                                 <li>
-𝓠’ = 𝓩 / (𝓢<sup>𝓿</sup>𝓡<sub>2</sub><sup>𝓶2</sup>𝓡<sub>3</sub><sup>𝓶3</sup>
+𝓠’ = 𝓩 / (𝓢<sup>𝓿</sup>𝓡<sub>1</sub><sup>𝓶1</sup>𝓡<sub>2</sub><sup>𝓶2</sup>𝓡<sub>3</sub><sup>𝓶3</sup>
 ··· 𝓡<sub>𝓵</sub><sup>𝓶𝓵</sup> )  mod 𝓷
                                 </li>
                                 <li>
 𝓭’ = 𝓬’’ + 𝓼<sub>𝓮</sub> 𝓮
                                 </li>
                                 <li>
-𝓐^ = 𝓐<sup>𝓭’</sup>𝓢<sup>𝓿’𝓼𝓮</sup> mod 𝓷
+𝓐^ = 𝓐<sup>𝓭’</sup> mod 𝓷
                                 </li>
                             </ul>
                         </section>
